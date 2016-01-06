@@ -3,7 +3,7 @@ package proiect;
 import javax.swing.JFrame;
 
 public class Frame {
-	private JFrame frame;
+	private static JFrame frame;
 
 	public Frame() {
 		frame = new JFrame();
@@ -16,7 +16,7 @@ public class Frame {
 		frame.setLocationRelativeTo(null);
 	}
 
-	public JFrame getFrame() {
+	public static JFrame getFrame() {
 		return frame;
 	}
 

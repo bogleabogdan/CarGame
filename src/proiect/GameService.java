@@ -12,9 +12,11 @@ public class GameService {
 	private Car car;
 	private Road road;
 	private Obstacle obstacle;
+	private Integer score;
 
 	public GameService() {
 		playing = true;
+		score = 0;
 	}
 
 	public void createCar(Double x, Double xVelocity, String imagePath) {
@@ -86,6 +88,32 @@ public class GameService {
 
 	public void setObstacle(Obstacle obstacle) {
 		this.obstacle = obstacle;
+	}
+
+	public void moveRoad() {
+		road.setyVelocity(1.4 + score / 2000);
+	}
+
+	public void moveObstacle() {
+		// o fac
+	}
+
+	public void moveCar(Direction direction) {
+		if (direction.equals(Direction.LEFT)) {
+			car.setxVelocity(-0.7);
+			// road.setyVelocity(0);
+		} else {
+			car.setxVelocity(0.7);
+			// road.setyVelocity(0);
+		}
+	}
+
+	public Integer getScore() {
+		return score;
+	}
+
+	public void setScore(Integer score) {
+		this.score = score;
 	}
 
 }

@@ -9,8 +9,8 @@ public class Application {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				Frame frame = new Frame();
-				frame.getFrame().add(new GamePanel());
+				new Frame();
+				Frame.getFrame().add(new GamePanel());
 			}
 
 		});
