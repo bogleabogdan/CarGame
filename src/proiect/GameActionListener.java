@@ -7,8 +7,8 @@ public class GameActionListener implements ActionListener {
 	private GameService service;
 	private GamePanel panel;
 
-	public GameActionListener(GamePanel panel) {
-		this.service = new GameService();
+	public GameActionListener(GameService service, GamePanel panel) {
+		this.service = service;
 		this.panel = panel;
 	}
 

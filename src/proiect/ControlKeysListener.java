@@ -7,8 +7,8 @@ public class ControlKeysListener implements KeyListener {
 
 	private GameService service;
 
-	public ControlKeysListener() {
-		service = new GameService();
+	public ControlKeysListener(GameService service) {
+		this.service = service;
 	}
 
 	@Override
