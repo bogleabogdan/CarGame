@@ -2,6 +2,7 @@ package proiect;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -9,12 +10,24 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-public class Test extends JPanel implements ActionListener, KeyListener{
-	private BufferedImage car=null; // imaginile pt masina, drum, obstacole
-	private BufferedImage road=null;
-	private BufferedImage rock=null;
+public class Test extends JPanel implements  KeyListener{
+	private BufferedImage car; // imaginile pt masina, drum, obstacole
+	private BufferedImage road;
+	private BufferedImage rock;
 	
-	Timer t = new Timer(5, this); // la fiecare 5 ms are loc actionPerformed
+	Timer t = new Timer(5, new ActionListener(){
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			repaint();
+			x+=velx;
+			y+=vely;
+			y2+=vely2;
+			score++;
+		}
+		
+	}); // la fiecare 5 ms are loc actionPerformed
 	
 	double x=417, y=-596, velx=0, vely=0, y2,vely2=0; //coordonatele si viteza de miscare
 	double score=0; //scor
@@ -106,13 +119,13 @@ public class Test extends JPanel implements ActionListener, KeyListener{
 		 t.stop();
 	}
 	}
-	public void actionPerformed(ActionEvent e){  // ce se intampla la fiecare timer
-		repaint();
-		x+=velx;
-		y+=vely;
-		y2+=vely2;
-		score++;
-	}
+//	public void actionPerformed(ActionEvent e){  // ce se intampla la fiecare timer
+//		repaint();
+//		x+=velx;
+//		y+=vely;
+//		y2+=vely2;
+//		score++;
+//	}
 	
 	public void up(){
 		vely=1.4+score/2000;
@@ -171,7 +184,8 @@ public class Test extends JPanel implements ActionListener, KeyListener{
 		}
 		if (code == KeyEvent.VK_Y){
 			// inchidere fereastra anterioara
-			WindowClass.main(arguments);
+			System.exit(0);
+			Window.main(arguments);
 			
 		}
 		if(code == KeyEvent.VK_N){
