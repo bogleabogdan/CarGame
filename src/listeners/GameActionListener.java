@@ -1,7 +1,10 @@
-package proiect;
+package listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import services.GameService;
+import view.GamePanel;
 
 public class GameActionListener implements ActionListener {
 	private GameService service;

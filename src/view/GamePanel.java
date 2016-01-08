@@ -1,10 +1,14 @@
-package proiect;
+package view;
 
 import java.awt.Graphics;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+
+import listeners.ControlKeysListener;
+import listeners.GameActionListener;
+import services.GameService;
 
 public class GamePanel extends JPanel {
 	private final GameService service;
@@ -18,14 +22,15 @@ public class GamePanel extends JPanel {
 
 		this.setSize(854, 480);
 		this.setLayout(null);
+		this.setFocusable(true);
 
 		score.setBounds(0, 0, 120, 50);
 
 		this.add(score);
 
-		service.createRoad(0.0, 0.0, "C:/Users/blackghost/Desktop/labpoo/proiect/road.png");
-		service.createCar(427.0, 0.0, "C:/Users/blackghost/Desktop/labpoo/proiect/2.png");
-		service.createObstacle(0.0, 0.0, "C:/Users/blackghost/Desktop/labpoo/proiect/rock.png");
+		service.createRoad(0.0, 0.0, "images/road.png");
+		service.createCar(427.0, 0.0, "images/2.png");
+		service.createObstacle(0.0, 0.0, "images/rock.png");
 
 		createTimer().start();
 		this.addKeyListener(new ControlKeysListener(service));

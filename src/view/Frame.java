@@ -1,4 +1,4 @@
-package proiect;
+package view;
 
 import javax.swing.JFrame;
 

@@ -1,4 +1,4 @@
-package proiect;
+package view;
 
 public enum Direction {
 	LEFT, RIGHT

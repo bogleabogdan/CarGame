@@ -3,6 +3,8 @@ package proiect;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+import view.Window;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;

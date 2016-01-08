@@ -1,10 +1,15 @@
-package proiect;
+package services;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+
+import models.Car;
+import models.Obstacle;
+import models.Road;
+import view.Direction;
 
 public class GameService {
 

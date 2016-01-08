@@ -1,4 +1,4 @@
-package proiect;
+package models;
 
 import java.awt.image.BufferedImage;
 
