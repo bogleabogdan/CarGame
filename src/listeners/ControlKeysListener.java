@@ -5,7 +5,6 @@ import java.awt.event.KeyListener;
 
 import proiect.Application;
 import services.GameService;
-import view.Direction;
 import view.Frame;
 
 public class ControlKeysListener implements KeyListener {

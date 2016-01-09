@@ -19,10 +19,15 @@ public class GameActionListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		panel.repaint();
+		service.setScore(service.getScore() + 1);
 		service.getCar().setX(service.getCar().getX() + service.getCar().getxVelocity());
+		service.checkCarPosition();
 		service.getRoad().setY(service.getRoad().getY() + service.getRoad().getyVelocity());
 		service.getObstacle().setY(service.getObstacle().getY() + service.getObstacle().getyVelocity());
-		service.setScore(service.getScore() + 1);
+		service.moveRoad();
+		service.moveObstacle();
+		service.checkCollision();
+
 	}
 
 }

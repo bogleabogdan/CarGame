@@ -3,15 +3,25 @@ package models;
 import java.awt.image.BufferedImage;
 
 public class Obstacle {
+	private Double x;
 	private Double y;
 	private Double yVelocity;
 	private BufferedImage obstacleImage;
 
-	public Obstacle(Double y, Double yVelocity, BufferedImage obstacleImage) {
+	public Obstacle(Double x, Double y, Double yVelocity, BufferedImage obstacleImage) {
 		super();
+		this.x = x;
 		this.y = y;
 		this.yVelocity = yVelocity;
 		this.obstacleImage = obstacleImage;
+	}
+
+	public Double getX() {
+		return x;
+	}
+
+	public void setX(Double x) {
+		this.x = x;
 	}
 
 	public Double getY() {
