@@ -3,7 +3,7 @@ package listeners;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import proiect.Application;
+import proiect.GUI;
 import services.GameService;
 import view.Frame;
 
@@ -28,7 +28,7 @@ public class ControlKeysListener implements KeyListener {
 		if (keyCode == KeyEvent.VK_Y) {
 			if (!service.isPlaying()) {
 				Frame.getFrame().removeAll();
-				Application.show();
+				GUI.show();
 			}
 		}
 		if (keyCode == KeyEvent.VK_N) {
